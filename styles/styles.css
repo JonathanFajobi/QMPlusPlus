@@ -185,6 +185,10 @@ nav ul li:first-child {
   height: 10%;
  }
 
+#logo:hover {
+  filter: brightness(0.3);
+}
+
 nav ul li a:hover {
   color: #5ab2ff;
   transition: 1s ease-in-out;
