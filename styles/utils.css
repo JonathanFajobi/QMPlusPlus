@@ -272,13 +272,14 @@
   min-height: 100px;
   max-height: fit-content;
   padding: 1rem;
-  transform: translateX(200px);
+  transform: translateX(10%);
   opacity: 0;
   transition: 2s ease-in-out;
 }
 
 .box-fit.show {
   transform: translateX(0);
+  z-index: 10;
   opacity: 1;
 }
 

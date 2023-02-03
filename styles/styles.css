@@ -63,6 +63,9 @@ button {
       left: 15%;
       top: 0px;
     }
+    10% {
+      opacity: 0;
+    }
     80% {
       opacity: 0.4;
     }
@@ -98,6 +101,9 @@ button {
     0% {
       right: 0px;
       left: 0px;
+    }
+    10% {
+      opacity: 0;
     }
     100% {
       right: 0px;
