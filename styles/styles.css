@@ -1,0 +1,217 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  padding: 10vh 0vh;
+  overflow: none;
+}
+
+a {
+  color: white;
+}
+
+header {
+  position: relative;
+}
+
+button {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+/* assets */
+#blob {
+  position: relative;
+  animation-name: fade-left;
+  animation-delay: 0.5s;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  z-index: -1;
+}
+
+#armin, #anastasiya  { 
+  position: relative;
+  animation-name: fade-left-people;
+  animation-delay: 0.75s;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  z-index: -1;
+}
+
+@media (max-width: 1200px) {
+  #blob {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  @keyframes fade-left {
+    0% {
+      right: 100px;
+      left: 650px;
+      top: 0px;
+    }
+    70% {
+      opacity: 0.4;
+    }
+    100% {
+      right: 0px;
+      left: 200px;
+      top: 30px;
+      opacity: 1;
+    }
+  }
+
+    @keyframes fade-left-people {
+      0% {
+        right: 100px;
+        left: 800px;
+        top: 0px;
+      }
+      70% {
+        opacity: 0.4;
+      }
+      100% {
+        right: 0px;
+        left: 700px;
+        top: 30px;
+        opacity: 1;
+      }
+  }
+}
+
+/* when screen is smaller than 1200 */
+@media only screen and (max-width: 1200px) {
+  @keyframes fade-left {
+    0% {
+      right: 0px;
+      left: 0px;
+    }
+    100% {
+      right: 0px;
+      left: 100px;
+      top: 0;
+      opacity: 100;
+    }
+  }
+}
+
+/* backgrounds */
+#plan-bg {
+  z-index: -10;
+  background: #5ab2ff;
+  background-size: cover;
+  background-image: linear-gradient(to bottom left, #5ab2ff, rgba(80, 91, 102,1));
+}
+
+#course-bg {
+  background: linear-gradient(90deg, rgba(80,91,102,0.25) 0%, rgba(90,178,255,0.65) 35%, rgba(90,178,255,1) 100%), url("../assets/screen.jpg");
+  background-size: 100%;
+}
+
+#about-bg {
+  background: url("../assets/students.jpg"), rgba(112, 128, 144);
+  backdrop-filter: brightness(60%);
+  background-size: cover;
+}
+
+#contact-bg {
+  background: url("/help.jpg"), rgba(112, 128, 144);
+  background-size: cover;
+}
+
+nav {
+  overflow: visible;
+  background-color: white;
+  width: 100%;
+  min-height: 3rem;
+  max-height: 4rem;
+  margin: 0;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a:not(#img){
+  display: block;
+  line-height: 3.5rem;
+  padding-right: 2rem;
+  color: slategray;
+  text-decoration: none;
+}
+
+nav ul li:first-child {
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+  padding: 0.5rem;
+}
+
+#logo {
+  width: 10%;
+  height: 10%;
+ }
+
+nav ul li a:hover {
+  color: #5ab2ff;
+  transition: 1s ease-in-out;
+}
+
+footer {
+  margin-top: 5vw;
+  background-color: whitesmoke;
+  width: 100%;
+  border-top: 2px solid lightgrey;
+  color: slategray;
+}
+
+footer a:hover {
+  transition: ease-in-out 0.5s;
+  color: darkgrey;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  footer {
+    margin-top: 50vh;
+  }
+}
+
+.link-container {
+  position: relative;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  height: 35%;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+  filter: brightness(0.1), alpha(opacity=95);
+  box-shadow: none;
+}
+
+
