@@ -59,16 +59,16 @@ button {
 @media only screen and (min-width: 1200px) {
   @keyframes fade-left {
     0% {
-      right: 100px;
-      left: 650px;
+      right: 45%;
+      left: 15%;
       top: 0px;
     }
-    70% {
+    80% {
       opacity: 0.4;
     }
     100% {
-      right: 0px;
-      left: 200px;
+      right: 25%;
+      left: 0%;
       top: 30px;
       opacity: 1;
     }
@@ -76,12 +76,12 @@ button {
 
     @keyframes fade-left-people {
       0% {
-        right: 100px;
-        left: 800px;
+        right: 45%;
+        left: 55%;
         top: 0px;
       }
-      70% {
-        opacity: 0.4;
+      15% {
+        opacity: 0.6;
       }
       100% {
         right: 0px;
