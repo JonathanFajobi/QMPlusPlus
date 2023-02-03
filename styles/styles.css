@@ -124,7 +124,16 @@ button {
 
 #course-bg {
   background: linear-gradient(90deg, rgba(80,91,102,0.25) 0%, rgba(90,178,255,0.65) 35%, rgba(90,178,255,1) 100%), url("../assets/screen.jpg");
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+@media (max-width:1200px){
+  #course-bg {
+    background: linear-gradient(90deg, rgba(80,91,102,1) 0%, rgba(90,178,255,1) 35%, rgba(90,178,255,1) 100%);
+    background-size: cover;
+    background-repeat: repeat;
+  }
 }
 
 #about-bg {
