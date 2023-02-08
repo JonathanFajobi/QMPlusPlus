@@ -1,6 +1,7 @@
 # QMPlusPlus
 QMPlusPlus 
 Visit site: 
+https://jonathanfajobi.github.io/QMPlusPlus/index.html
 
 Site is an ongoing work in progress - functionality is extremely incomplete
 
