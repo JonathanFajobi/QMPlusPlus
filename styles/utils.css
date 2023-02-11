@@ -66,9 +66,6 @@
 }
 
 @media (max-width: 700px) {
-  #logo {
-    display: none;
-  }
   .padding-lg {
     padding: 0vw;
   }

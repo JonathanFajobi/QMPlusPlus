@@ -5,6 +5,10 @@
   list-style: none;
 }
 
+:root {
+  overflow-x: hidden;
+}
+
 body {
   overflow-x: hidden;
   margin: 0;
@@ -32,23 +36,28 @@ button {
 
 /* assets */
 #blob {
-  position: relative;
+  position: absolute;
+  background-blend-mode: multiply;
   animation-name: fade-left;
   animation-delay: 0.5s;
   animation-duration: 5s;
   animation-fill-mode: forwards;
   opacity: 0;
-  z-index: -1;
+  z-index: 1;
 }
 
 #armin, #anastasiya  { 
-  position: relative;
+  position: absolute;
   animation-name: fade-left-people;
   animation-delay: 0.75s;
   animation-duration: 5s;
   animation-fill-mode: forwards;
   opacity: 0;
-  z-index: -1;
+  z-index: 2;
+}
+
+#resize-header {
+  max-width:50%;
 }
 
 @media (max-width: 1200px) {
@@ -58,9 +67,9 @@ button {
 }
 @media only screen and (min-width: 1200px) {
   @keyframes fade-left {
-    0% {
+    /* 0% {
       right: 45%;
-      left: 15%;
+      left: 50%;
       top: 0px;
     }
     10% {
@@ -74,7 +83,22 @@ button {
       left: 0%;
       top: 30px;
       opacity: 1;
+    } */
+    0% {
+      right: 45%;
+      left: 55%;
+      top: 0px;
     }
+    15% {
+      opacity: 0.6;
+    }
+    100% {
+      right: 0px;
+      left: 700px;
+      top: 30px;
+      opacity: 1;
+    }
+    
   }
 
     @keyframes fade-left-people {
@@ -92,11 +116,17 @@ button {
         top: 30px;
         opacity: 1;
       }
+      
   }
 }
 
 /* when screen is smaller than 1200 */
 @media only screen and (max-width: 1200px) {
+  
+  #resize-header {
+    max-width:100%;
+  }
+  
   @keyframes fade-left {
     0% {
       right: 0px;
@@ -115,7 +145,7 @@ button {
 }
 
 /* backgrounds */
-#plan-bg {
+#modules-bg {
   z-index: -10;
   background: #5ab2ff;
   background-size: cover;
@@ -123,7 +153,7 @@ button {
 }
 
 #course-bg {
-  background: linear-gradient(90deg, rgba(80,91,102,0.25) 0%, rgba(90,178,255,0.65) 35%, rgba(90,178,255,1) 100%), url("../assets/screen.jpg");
+  background: linear-gradient(90deg, rgba(80,91,102,0.25) 0%, rgba(90,178,255,0.65) 35%, rgba(90,178,255,1) 100%), url("../assets/students2.jpg");
   background-size: cover;
   background-repeat: repeat;
 }
@@ -181,8 +211,8 @@ nav ul li:first-child {
 }
 
 #logo {
-  width: 10%;
-  height: 10%;
+  width: 50px;
+  height: 50px;
  }
 
 #logo:hover {
@@ -190,8 +220,9 @@ nav ul li:first-child {
 }
 
 nav ul li a:hover {
-  color: #5ab2ff;
-  transition: 1s ease-in-out;
+  color: #000000;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 footer {
