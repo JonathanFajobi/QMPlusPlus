@@ -7,6 +7,8 @@
 
 :root {
   overflow-x: hidden;
+  --backgroundopacity: opacity:0.5;
+  --students2: url("../assets/students2.jpg");
 }
 
 body {
@@ -152,6 +154,12 @@ button {
   background-image: linear-gradient(to bottom left, #5ab2ff, rgba(80, 91, 102,1));
 }
 
+#cc-bg {
+  background: linear-gradient(90deg, rgba(80,91,102,0.25) 0%, rgba(90,178,255,0.65) 35%, rgba(90,178,255,1) 100%), url("../assets/books.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 #course-bg {
   background: linear-gradient(90deg, rgba(80,91,102,0.25) 0%, rgba(90,178,255,0.65) 35%, rgba(90,178,255,1) 100%), url("../assets/students2.jpg");
   background-size: cover;
@@ -159,7 +167,8 @@ button {
 }
 
 #sounddes-bg {
-  background: linear-gradient(90deg, rgba(80,91,102,0.25) 0%, rgba(90,178,255,0.65) 35%, rgba(90,178,255,1) 100%), url("../assets/students3.jpg");
+  backdrop-filter: blur(5px);
+  background: linear-gradient(90deg, rgba(80,91,102,0.25) 0%, rgba(90,178,255,0.65) 35%, rgba(90,178,255,0.8) 100%), url("../assets/students3B.png");
   background-size: cover;
   background-repeat: repeat;
 }
@@ -190,7 +199,7 @@ nav {
   min-height: 3rem;
   max-height: 4rem;
   margin: 0;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
